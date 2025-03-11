@@ -3,8 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Sviluppo di un pagina web - Blog Epicode</title>
     <style>
+      h4 {
+        margin: 0;
+      }
+      ul,
+      ol {
+        margin-top: 0;
+      }
       .center {
         display: block;
         margin-left: auto;
@@ -23,7 +30,7 @@
         display: flex;
         justify-content: space-between;
       }
-      header {
+      #titolo {
         background: linear-gradient(120deg, rgb(222, 177, 240), #e482e4);
       }
       h2 {
@@ -59,18 +66,24 @@
       table {
         margin-bottom: 1em;
       }
+      .p {
+        margin: 0;
+      }
     </style>
   </head>
   <body>
-    <img src="./logo.svg" alt="logo" class="center" />
-    <div id="menu">
-      <a href="https://epicode.com/it/">Home</a>
-      <a href="https://epicode.com/it/domande-frequenti/">Articoli</a>
-      <a href="https://epicode.com/it/lavora-con-noi/" style="width: auto">Lavora con noi</a>
-    </div>
     <header>
-      <h1>Sviluppo di una pagina web - Blog Epcode</h1>
-      <p>Primi passi operativi per creare un modello di pagina HTML per un post. Scopri come iniziare in modo facile.</p>
+      <img src="./assets/img/logo.svg" alt="logo" class="center" />
+      <span>Epicode - Il blog dei developers</span>
+      <div id="menu">
+        <a href="https://epicode.com/it/">Home</a>
+        <a href="https://epicode.com/it/domande-frequenti/">Articoli</a>
+        <a href="https://epicode.com/it/lavora-con-noi/" style="width: auto">Lavora con noi</a>
+      </div>
+      <div id="titolo">
+        <h1>Sviluppo di una pagina web - Blog Epicode</h1>
+        <p>Primi passi operativi per creare un modello di pagina HTML per un post. Scopri come iniziare in modo facile.</p>
+      </div>
     </header>
 
     <main>
@@ -80,15 +93,15 @@
       </section>
       <section>
         <p>La prima cosa da fare è suddividere in blocchi la pagina, identificando le parti comuni da applicare a tutte le pagine.</p>
+        <p class="p">Le varie aree saranno quindi suddivise in:</p>
         <ul>
-          Le varie aree saranno quindi suddivise in:
           <li>Contenuti di intestazione del tag &lt;header&gt;</li>
           <li>Contenuti centrali variabili del tag &lt;main&gt; (corpo principale)</li>
           <li>Contenuti di fine pagina comuni, da inserire nel tag &lt;footer&gt;</li>
         </ul>
         <h4>Formattazione del codice</h4>
+        <p class="p">Il testo dell'articolo dovrà essere formattato per identificare tutte le parti da selezionare con i CSS. Perciò i passi saranno:</p>
         <ol>
-          Il testo dell'articolo dovrà essere formattato per identificare tutte le parti da selezionare con i CSS. Perciò i passi saranno:
           <li>Progettare il markup assegnando ad ogni specifico testo il tag appropriato</li>
           <li>Scrivere l'HTML dai tag esterni a quelli interni e dall'alto verso il basso</li>
           <li>Applicare gli stili CSS</li>
@@ -162,6 +175,7 @@
         </fieldset>
         <fieldset>
           <legend>Articoli Correlati</legend>
+          <!-- per la parte sotto è meglio usare 3 div che stanno l'uno sopra l'altro. -->
           <p>Validare il codice HTML<br />Categoria:develop<br />Data: 18-9-2020</p>
           <p>Correggere la sintassi<br />Categoria:develop<br />Data: 16-9-2020</p>
           <p>Meno Kb nella pagina<br />Categoria:ottimizzazione<br />Data: 30-9-2020</p>
